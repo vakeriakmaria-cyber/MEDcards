@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Movements</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .card {
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .card.is-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .card-front {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .card-back {
+            background-color: #f9f9f9;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Движения тела и позиции -->
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Присесть</div><div class="card-back">To squat</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Встать</div><div class="card-back">To stand up</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Сесть</div><div class="card-back">To sit down</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Лечь</div><div class="card-back">To lie down</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Встать на носки</div><div class="card-back">To stand on tiptoes</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Отклониться назад</div><div class="card-back">To lean back</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Наклониться вперёд</div><div class="card-back">To lean forward</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Наклониться вбок</div><div class="card-back">To lean to the side</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Встать на одну ногу</div><div class="card-back">To stand on one leg</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Перевернуться</div><div class="card-back">To roll over</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Повернуться</div><div class="card-back">To turn around</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Пересесть</div><div class="card-back">To transfer (oneself)</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Подняться</div><div class="card-back">To get up</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Опуститься</div><div class="card-back">To lower yourself</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Переместиться</div><div class="card-back">To transfer / reposition</div></div></div>
+
+    <!-- Руки и ноги -->
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Поднять руку</div><div class="card-back">To raise the arm</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Опустить руку</div><div class="card-back">To lower the arm</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Вытянуть руку</div><div class="card-back">To stretch the arm (вытяните руку вперёд)</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Согнуть руку</div><div class="card-back">To bend the arm</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Разогнуть руку</div><div class="card-back">To straighten the arm</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Отвести руку</div><div class="card-back">To move the arm away</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Привести руку</div><div class="card-back">To bring the arm back</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Повернуть голову</div><div class="card-back">To turn the head</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Покрутить плечами</div><div class="card-back">To roll the shoulders</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Напрячь мышцы</div><div class="card-back">To tense the muscles</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Расслабить мышцы</div><div class="card-back">To relax the muscles</div></div></div>
+
+    <!-- Пространственное движение -->
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Отодвинуться</div><div class="card-back">To move back / To scoot back</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Придвинуться</div><div class="card-back">To move closer / To scoot forward</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Подвинуться</div><div class="card-back">To shift / To scoot</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Сместиться</div><div class="card-back">To shift slightly</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Подползти</div><div class="card-back">To crawl / To inch closer</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Прислониться</div><div class="card-back">To lean against</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Упереться</div><div class="card-back">To brace (oneself)</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Оттолкнуться</div><div class="card-back">To push off</div></div></div>
+
+    <!-- Дыхание и мелкая моторика -->
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Делать вдох</div><div class="card-back">To inhale</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Делать выдох</div><div class="card-back">To exhale</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Дышать</div><div class="card-back">To breathe</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Потянуться</div><div class="card-back">To reach / stretch out</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Удерживать позу</div><div class="card-back">To hold a position</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Повторить движение</div><div class="card-back">To repeat the movement</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Ускорить движение</div><div class="card-back">To speed up the movement</div></div></div>
+    <div class="card" onclick="this.classList.toggle('is-flipped');"><div class="card-inner"><div class="card-front">Замедлить движение</div><div class="card-back">To slow down the movement</div></div></div>
+
+</body>
+</html>
